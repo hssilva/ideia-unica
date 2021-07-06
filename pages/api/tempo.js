@@ -1,7 +1,7 @@
 async function tempo(request, response){
     const dynamic = new Date();
 
-    const regiaoResponse = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/regioes/{macrorregiao}")
+    const regiaoResponse = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/regioes/11")
     const regiaoJson = await regiaoResponse.json();
     const regiao = regiaoJson.nome;
 
