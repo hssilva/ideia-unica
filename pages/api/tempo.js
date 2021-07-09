@@ -6,7 +6,7 @@ async function tempo(request, response){
     const regiaoJson = await regiaoResponse.json();
     const regiao = regiaoJson.nome;*/
 
-    response.setHeader('Cache-Contol', 's-maxage=10, stale-while-revalidate');
+    response.setHeader('Cache-Contol', 's-maxage=20, stale-while-revalidate');
 
     response.json({
         date: dynamic.toGMTString()/*,
