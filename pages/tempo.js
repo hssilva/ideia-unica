@@ -22,7 +22,7 @@ export async     function getStaticProps(){
         props:{
             staticDateStrimg
         },
-        revalidate: 100
+        revalidate: 10
     }
     
 }
