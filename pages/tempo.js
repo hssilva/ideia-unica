@@ -1,5 +1,5 @@
 function Tempo(props) {
-    console.log('> Passando pelo Frontend;')
+    console.log('> [tempo.js] - function Tempo: ' + Date.now())
     const dynamicDate = new Date();
     const dynamicDateStrimg = dynamicDate.toGMTString();
 
@@ -13,7 +13,7 @@ function Tempo(props) {
 }
 
 export async     function getStaticProps(){
-    console.log('> Passando pelo getStaticProps();');
+    console.log('> [tempo.js] - funcation getStaticProps: ' + Date.now());
     
     const staticDate = new Date();
     const staticDateStrimg = staticDate.toGMTString();
@@ -22,9 +22,9 @@ export async     function getStaticProps(){
         props:{
             staticDateStrimg
         },
-        revalidate: 1
+        revalidate: 100
     }
-
+    
 }
 
 export default Tempo;
